@@ -1,0 +1,41 @@
+#research-group-table {
+  padding: 5vmin;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 5fr;
+  grid-gap: 0.1rem;
+  word-break: keep-all;
+  margin-bottom: 26vmax;
+}
+
+@media screen and (max-width: 768px) {
+  #research-group-table {
+    font-size: 0.9rem;
+    margin-bottom: 26vmin;
+  }
+}
+
+#research-group-table div.labels {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  height: 40px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: rgba(46, 45, 45, 0.9);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3),
+    0px -2px 10px rgba(255, 255, 255, 0.2);
+}
+#research-group-table div.contents {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.3rem;
+  background-color: rgba(46, 45, 45, 0);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3),
+    0px -2px 10px rgba(255, 255, 255, 0.2);
+}

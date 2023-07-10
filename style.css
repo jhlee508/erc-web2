@@ -1,0 +1,291 @@
+html {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+}
+/*
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  /* padding: 0 15vw; */
+  margin:0 0;
+  overflow-x: hidden;
+  -webkit-fontsmoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-image: radial-gradient(
+    circle at 30% 0%,
+    #141419,
+    #252736 71%,
+    #373b52
+  );
+}
+
+@font-face {
+  font-family: 'KorailRoundGothicBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicBold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KORAIL';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KORAIL.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 10vmin;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.top-block {
+  z-index: 1;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem; /*html의 사이즈 기준*/
+}
+
+#top-block-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3px;
+  /* font-weight: bold; */
+  word-break: keep-all;
+}
+#sub-title1 {
+  font-size: 1em; /*em으로 하면 부모 요소의 사이즈 기준으로 됨 (즉 top-block의 fontsize 기준)*/
+  color: #cdcdcd;
+  margin-bottom: 0.3em;
+  font-family: 'KorailRoundGothicBold';
+}
+#main-title {
+  font-size: 2em;
+  color: #cdcdcd;
+  margin-bottom: 0.3em;
+  font-family: 'KorailRoundGothicBold';
+}
+#sub-title2 {
+  font-size: 1em;
+  font-weight: 300;
+  color: #cdcdcd;
+  font-family: 'KorailRoundGothicBold';
+}
+
+#top-logo {
+  width: 75vw;
+  height: auto;
+}
+#top-img {
+  width: 150px;
+  height: auto;
+}
+#snu-img {
+  width: 130px;
+  height: auto;
+  padding: 0 10px 0 16px; /*top-pic 자체에 여백 있어서 여기도 여백 줌*/
+}
+
+.nav {
+  z-index: 1;
+  padding-top: 4vw;
+  font-size: 1.8rem;
+  color: gainsboro;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    padding: 0 5vw;
+  }
+  .top-block {
+    font-size: 0.6rem;
+  }
+  #top-img {
+    width: 50px;
+  }
+  #snu-img {
+    width: 40px;
+    padding: 0 5px 0 8px; /*top-pic 자체에 여백 있어서 여기도 여백줌*/
+  }
+  .nav {
+    font-size: 0.8rem;
+  }
+}
+
+.contents {
+  z-index: 1;
+  position: relative;
+  font-size: 1.5rem;
+  padding: 4.8vw 0px;
+  color: #cdcdcd;
+  text-align: left;
+  word-break: keep-all;
+}
+
+a.link {
+  color: #7fefbd;
+}
+a.link:visited {
+  color: #888da059;
+}
+a:hover {
+  color: white;
+}
+a.link:active {
+  color: #0b5332;
+}
+
+a.nav-button,
+a.nav-button:link {
+  padding: 0 2vw;
+}
+
+a.enabled {
+  text-decoration: none;
+  color: #cdcdcd;
+}
+a.enabled:hover {
+  color: white;
+}
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: underline;
+  color: #cdcdcd;
+}
+
+ul,
+ol {
+  line-height: 1.8;
+  /* margin: 0; */
+  padding-inline-start: 1.5em;
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: lower-alpha;
+}
+
+li::marker {
+  color: #7fefbd;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.diagram-container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+#diagram-img {
+  width: 44vmax;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+  margin-top: 1vmax;
+  margin-bottom: 28vmax;
+}
+
+.footer {
+  width: 100%;
+  border-top: 1px solid #888da059;
+  margin: 0px 20px 0px 20px;
+  padding: 10px 0px 10px 0px;
+  font-size: 1.2rem;
+  color: #888da059;
+}
+
+@media screen and (max-width: 768px) {
+  .contents {
+    font-size: 0.9rem;
+  }
+  #diagram-img {
+    width: 36vmax;
+    margin-bottom: 26vmin;
+  }
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 288px) {
+  .contents {
+    font-size: 0.7rem;
+  }
+  #main-title {
+    font-size: 1.8em;
+  }
+  #diagram-img {
+    width: 36vmax;
+    margin-bottom: 26vmin;
+  }
+  .footer {
+    font-size: 0.6rem;
+  }
+}
+
+.background-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+#background-top {
+  z-index: 0;
+  top: 2vh;
+  position: absolute;
+  background-image: url(./assets/images/bg-logo-top.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  padding-top: 50%;
+}
+
+#background-bottom {
+  z-index: 0;
+  bottom: 5vh;
+  position: absolute;
+  background-image: url(./assets/images/bg-logo-bottom.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  #background-top {
+    top: 14vh;
+  }
+}
