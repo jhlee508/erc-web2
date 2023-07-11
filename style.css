@@ -99,7 +99,7 @@ body {
 }
 
 #top-logo {
-  width: 75vw;
+  width: 80vw;
   height: auto;
 }
 #top-img {
@@ -201,6 +201,11 @@ li::marker {
   color: #7fefbd;
   font-size: 0.9em;
   font-weight: bold;
+}
+
+#li-tag {
+  color: #7fefbd;
+  padding-right: 5px;
 }
 
 .diagram-container {
