@@ -99,6 +99,8 @@ body {
 }
 
 #top-logo {
+  max-width: 900px;
+  min-width: 280px;
   width: 80vw;
   height: auto;
 }
@@ -115,7 +117,7 @@ body {
 .nav {
   z-index: 1;
   padding-top: 4vw;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: gainsboro;
   display: flex;
 }
@@ -142,7 +144,7 @@ body {
 .contents {
   z-index: 1;
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 4.8vw 0px;
   color: #cdcdcd;
   text-align: left;
@@ -214,6 +216,7 @@ li::marker {
   justify-content: center;
 }
 #diagram-img {
+  max-width: 800px;
   width: 44vmax;
   height: auto;
   justify-self: center;
